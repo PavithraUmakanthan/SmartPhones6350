@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BMI_application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="8cW-zi-iOi">
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="Jho-lk-fN3">
+                                <rect key="frame" x="138.66666666666666" y="139" width="113" height="566.33333333333337"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NhH-x6-VCD">
+                                        <rect key="frame" x="2" y="0.0" width="109" height="193"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Height" borderStyle="roundedRect" placeholder="weight in lbs" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T98-Og-cuC" userLabel="Txt Height">
+                                                <rect key="frame" x="0.0" y="0.0" width="109" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qt3-JI-VP4">
+                                                <rect key="frame" x="0.0" y="54" width="109" height="32"/>
+                                                <segments>
+                                                    <segment title="FT-IN"/>
+                                                    <segment title="CM"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="InchestoCM:" destination="BYZ-38-t0r" eventType="valueChanged" id="Otp-x1-eZ8"/>
+                                                </connections>
+                                            </segmentedControl>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s10-5G-chD" userLabel="Txt ftConvert">
+                                                <rect key="frame" x="0.0" y="105" width="109" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SYe-WD-Hih" userLabel="Txt InConvert">
+                                                <rect key="frame" x="0.0" y="159" width="109" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="25K-iW-Vbv">
+                                        <rect key="frame" x="19" y="248" width="75" height="157"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Weight" borderStyle="roundedRect" placeholder="Feet" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="16c-1r-lxc" userLabel="Txt Weight">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BPh-K8-6Vu">
+                                                <rect key="frame" x="0.0" y="63" width="75" height="32"/>
+                                                <segments>
+                                                    <segment title="lbs"/>
+                                                    <segment title="kg"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="lbstoKg:" destination="BYZ-38-t0r" eventType="valueChanged" id="vfq-DE-WnF"/>
+                                                </connections>
+                                            </segmentedControl>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7gE-qK-wMD" userLabel="Txt kgConvert">
+                                                <rect key="frame" x="0.0" y="123" width="75" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wj1-Jr-YkA">
+                                        <rect key="frame" x="0.0" y="460" width="113" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Calculate BMI"/>
+                                        <connections>
+                                            <action selector="calBMI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="COh-Yn-cxr"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ty5-Jf-iiu">
+                                        <rect key="frame" x="41.666666666666686" y="546" width="29.333333333333329" height="20.333333333333371"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jho-lk-fN3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="522-AC-aPd"/>
+                            <constraint firstItem="Jho-lk-fN3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v6b-aE-EQj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="InchestoCMController" destination="qt3-JI-VP4" id="ZM5-8w-3o7"/>
+                        <outlet property="cmConvert" destination="s10-5G-chD" id="0sa-A7-Giu"/>
+                        <outlet property="inConvert" destination="SYe-WD-Hih" id="qd3-Ek-Iqm"/>
+                        <outlet property="lbstoKgController" destination="BPh-K8-6Vu" id="f7K-9f-cOB"/>
+                        <outlet property="resultBMI" destination="Ty5-Jf-iiu" id="iib-t2-z0P"/>
+                        <outlet property="txtFeet" destination="16c-1r-lxc" id="s45-l1-nch"/>
+                        <outlet property="txtInches" destination="7gE-qK-wMD" id="YOH-tv-REn"/>
+                        <outlet property="txtLbs" destination="BPh-K8-6Vu" id="sCK-S8-xv4"/>
+                        <outlet property="txtWeight" destination="T98-Og-cuC" id="Tac-o2-Wmx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="82.464454976303315"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="414" height="736"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
